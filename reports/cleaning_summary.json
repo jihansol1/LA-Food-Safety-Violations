@@ -1,0 +1,189 @@
+{
+  "sources": [
+    {
+      "filename": "inspections.csv",
+      "bytes": 23997121,
+      "sha256": "fbb9c492d61ec4bd60869b7fe9cbea522174dff3f27a723cabb68d7b9bccdc93",
+      "encoding": "cp1252",
+      "rows": 100386,
+      "columns": 20,
+      "exact_duplicate_rows_before_whitespace_normalization": 0,
+      "duplicate_rows_after_whitespace_normalization": 0,
+      "missing_by_column": {
+        "activity_date": 0,
+        "owner_id": 0,
+        "owner_name": 0,
+        "facility_id": 0,
+        "facility_name": 0,
+        "record_id": 0,
+        "program_name": 0,
+        "program_status": 95,
+        "program_element": 0,
+        "pe_description": 0,
+        "facility_address": 0,
+        "facility_city": 0,
+        "facility_state": 0,
+        "facility_zip": 0,
+        "service_code": 0,
+        "service_description": 0,
+        "score": 0,
+        "grade": 123,
+        "serial_number": 0,
+        "employee_id": 0
+      }
+    },
+    {
+      "filename": "violations.csv",
+      "bytes": 40514054,
+      "sha256": "12cd5fd53069394ab65e3f2c9bbdff2e46504992acaab44db1ebec6d4650af0b",
+      "encoding": "utf-8-sig",
+      "rows": 420777,
+      "columns": 5,
+      "exact_duplicate_rows_before_whitespace_normalization": 209,
+      "duplicate_rows_after_whitespace_normalization": 209,
+      "missing_by_column": {
+        "serial_number": 0,
+        "violation_status": 0,
+        "violation_code": 0,
+        "violation_description": 0,
+        "points": 0
+      }
+    }
+  ],
+  "source_guidance": [
+    "https://publichealth.lacounty.gov/eh/inspection/retail-food-inspection-guide.htm"
+  ],
+  "all_inspections": {
+    "inspections": 100386,
+    "facilities": 43087,
+    "programs": 47270,
+    "date_min": "2023-10-01",
+    "date_max": "2026-09-30",
+    "labels": {
+      "y_major": {
+        "positive": 20117,
+        "negative": 79381,
+        "unknown": 888,
+        "positive_fraction_of_known": 0.20218496854208126
+      },
+      "y_minor": {
+        "positive": 47801,
+        "negative": 51697,
+        "unknown": 888,
+        "positive_fraction_of_known": 0.4804217170194376
+      },
+      "y_grp": {
+        "positive": 94103,
+        "negative": 5395,
+        "unknown": 888,
+        "positive_fraction_of_known": 0.9457778045789865
+      }
+    }
+  },
+  "routine_restaurant_inspections": {
+    "inspections": 74339,
+    "facilities": 32999,
+    "programs": 35210,
+    "date_min": "2023-10-01",
+    "date_max": "2026-09-30",
+    "labels": {
+      "y_major": {
+        "positive": 16792,
+        "negative": 56840,
+        "unknown": 707,
+        "positive_fraction_of_known": 0.22805302042590178
+      },
+      "y_minor": {
+        "positive": 37609,
+        "negative": 36023,
+        "unknown": 707,
+        "positive_fraction_of_known": 0.5107697740112994
+      },
+      "y_grp": {
+        "positive": 70433,
+        "negative": 3199,
+        "unknown": 707,
+        "positive_fraction_of_known": 0.9565542155584529
+      }
+    }
+  },
+  "modeling_cohort": {
+    "inspections": 73632,
+    "facilities": 32820,
+    "programs": 35027,
+    "date_min": "2023-10-01",
+    "date_max": "2026-09-30",
+    "labels": {
+      "y_major": {
+        "positive": 16792,
+        "negative": 56840,
+        "unknown": 0,
+        "positive_fraction_of_known": 0.22805302042590178
+      },
+      "y_minor": {
+        "positive": 37609,
+        "negative": 36023,
+        "unknown": 0,
+        "positive_fraction_of_known": 0.5107697740112994
+      },
+      "y_grp": {
+        "positive": 70433,
+        "negative": 3199,
+        "unknown": 0,
+        "positive_fraction_of_known": 0.9565542155584529
+      }
+    }
+  },
+  "routine_restaurant_inspections_excluded_for_quality": 707,
+  "quality_flags_all_inspections": {
+    "invalid_date": 0,
+    "invalid_score": 0,
+    "missing_program_identifiers": 0,
+    "has_unresolved_violations": 840,
+    "score_point_mismatch": 51,
+    "missing_violation_records_nonperfect_score": 0
+  },
+  "quality_flags_routine_restaurants": {
+    "invalid_date": 0,
+    "invalid_score": 0,
+    "missing_program_identifiers": 0,
+    "has_unresolved_violations": 668,
+    "score_point_mismatch": 42,
+    "missing_violation_records_nonperfect_score": 0
+  },
+  "violation_categories": {
+    "grp": 313033,
+    "minor": 68528,
+    "major": 23780,
+    "administrative": 12921,
+    "multiple_major_penalty": 1641,
+    "unresolved": 874
+  },
+  "unresolved_violation_reasons": {
+    "grp_code_unexpected_points": 798,
+    "unsupported_code_family": 48,
+    "critical_code_unexpected_points": 24,
+    "unexpected_status": 3,
+    "unsupported_food_code": 1
+  },
+  "orphan_violation_rows": 21,
+  "orphan_inspection_ids": 7,
+  "inspections_without_violation_rows": 2935,
+  "inferred_no_scored_violations": 2935,
+  "repeat_evidence": {
+    "inspections_with_changed_point_sum_if_deduplicated": 141,
+    "score_matches_with_repeats": 137,
+    "score_matches_without_repeats": 3
+  },
+  "cohort_inspections_with_strictly_earlier_clean_visit": 38598,
+  "cohort_same_day_program_multiple_inspections": 66,
+  "checks": {
+    "raw_inputs_unchanged": true,
+    "inspection_key_unique": true,
+    "source_rows_preserved": true,
+    "cohort_labels_complete_binary": true,
+    "cohort_points_reconcile": true,
+    "cohort_labels_match_category_counts": true
+  },
+  "scope": "Cleaning and inspection-level labels only; no historical features, train/dev/test splits, or models."
+}
