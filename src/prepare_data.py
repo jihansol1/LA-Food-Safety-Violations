@@ -329,7 +329,7 @@ def write_report(summary: dict, path: Path) -> None:
         "", "1. Review unresolved cases and document the conservative exclusions. Code-version changes may cause temporal measurement differences; compare prevalence by month using monthly_cohort_statistics.csv.",
         "2. Construct features strictly before the chosen prediction cutoff; never use the target inspection's score, grade, or violation counts as inputs.",
         "3. Define chronological train/dev/test periods and produce split-specific label statistics. Do not impute, scale, or fit encoders on the entire dataset.",
-        "4. Train the previous-score baseline and three logistic classifiers before adding XGBoost.",
+        "4. Keep the feature schema and chronological assignments available for subsequent modeling branches.",
         "", "## Reproduction", "", "From the repository root:", "", "```bash", "python -m pip install -r requirements-cleaning.txt", "python src/prepare_data.py", "python -m unittest discover -s tests -p 'test_prepare_data.py' -v", "```", "",
         "Optional --raw-dir, --output-dir, and --report-dir arguments override default project locations. Run the script against original inputs; output tables are regenerated deterministically.",
         "", "## Source guidance", "", f"- LA County Retail Food Inspection Guide: {GUIDE_URL}",
