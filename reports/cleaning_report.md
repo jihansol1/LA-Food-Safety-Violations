@@ -68,7 +68,7 @@ The cohort contains 73,632 inspection outcomes, not that many independent restau
 1. Review unresolved cases and document the conservative exclusions. Code-version changes may cause temporal measurement differences; compare prevalence by month using monthly_cohort_statistics.csv.
 2. Construct features strictly before the chosen prediction cutoff; never use the target inspection's score, grade, or violation counts as inputs.
 3. Define chronological train/dev/test periods and produce split-specific label statistics. Do not impute, scale, or fit encoders on the entire dataset.
-4. Train the previous-score baseline and three logistic classifiers before adding XGBoost.
+4. Keep the feature schema and chronological assignments available for subsequent modeling branches.
 
 ## Reproduction
 

@@ -1,0 +1,8 @@
+{
+  "prediction_rule": "month_start",
+  "train_start": "2024-04-01",
+  "dev_start": "2025-07-01",
+  "dev_analysis_start": "2025-10-01",
+  "test_start": "2026-01-01",
+  "test_end_exclusive": "2026-10-01"
+}
