@@ -1,0 +1,8 @@
+{
+  "smoothing_grid": [0, 5, 20, 100],
+  "selection_metric": "mean_brier_score",
+  "threshold_metric": "per_label_f1",
+  "seed": 467,
+  "priority_weights": [4, 2, 1],
+  "ranking_budgets": [0.05, 0.1, 0.2]
+}
