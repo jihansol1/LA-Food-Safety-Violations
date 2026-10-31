@@ -1,0 +1,126 @@
+{
+  "config": {
+    "smoothing_grid": [
+      0,
+      5,
+      20,
+      100
+    ],
+    "selection_metric": "mean_brier_score",
+    "threshold_metric": "per_label_f1",
+    "seed": 467,
+    "priority_weights": [
+      4,
+      2,
+      1
+    ],
+    "ranking_budgets": [
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "method": "category_recurrence",
+  "selected_alpha": 0.0,
+  "decision_thresholds": [
+    0.15504422509934623,
+    0.4285422412912453,
+    0.8
+  ],
+  "training_examples": 18406,
+  "tuning_examples": 3744,
+  "analysis_examples": 3409,
+  "inputs": [
+    "last_present_major",
+    "last_present_minor",
+    "last_present_grp"
+  ],
+  "labels": [
+    "y_major",
+    "y_minor",
+    "y_grp"
+  ],
+  "train_sha256": "41eb4d27d1457856159d8df78b9f55b358f22910f8701e62323fac4a5d11f696",
+  "dev_sha256": "8e96c2668f8d25bcc570ea2ef83e223180b21fb8012eac6389dada35b35d4ea8",
+  "model_sha256": "d4e117f0c24e3f64bd22f55d799c0d98f8c9da30683ac0d57de0eb7c27a6d604",
+  "test_evaluated_this_run": false,
+  "test_partition_opened": false,
+  "development_analysis_results": [
+    {
+      "threshold_policy": "dev_f1",
+      "examples": 3409,
+      "macro_ap": 0.6036926705955636,
+      "mean_brier": 0.17468308308708025,
+      "macro_f1": 0.693435266456717,
+      "label_accuracy": 0.5731886183631564,
+      "exact_match_accuracy": 0.15928424757993548,
+      "major_ap": 0.35373224040572443,
+      "minor_ap": 0.5056903690667938,
+      "grp_ap": 0.9516554023141727,
+      "window": "dev_analysis",
+      "precision_at_5pct": 0.5185483870967742,
+      "recall_at_5pct": 0.08094440808092307,
+      "lift_at_5pct": 1.5882411949022526,
+      "ndcg_at_5pct": 0.6086679443186633,
+      "precision_at_10pct": 0.511638897890159,
+      "recall_at_10pct": 0.15792440182007328,
+      "lift_at_10pct": 1.566524563269704,
+      "ndcg_at_10pct": 0.607423677903654,
+      "precision_at_20pct": 0.4602539149023097,
+      "recall_at_20pct": 0.2823477238016639,
+      "lift_at_20pct": 1.4086304503358618,
+      "ndcg_at_20pct": 0.5854232213513976
+    },
+    {
+      "threshold_policy": "fixed_0.5",
+      "examples": 3409,
+      "macro_ap": 0.6036926705955636,
+      "mean_brier": 0.17468308308708025,
+      "macro_f1": 0.516996347115568,
+      "label_accuracy": 0.7411753202307617,
+      "exact_match_accuracy": 0.3936638310354943,
+      "major_ap": 0.35373224040572443,
+      "minor_ap": 0.5056903690667938,
+      "grp_ap": 0.9516554023141727,
+      "window": "dev_analysis",
+      "precision_at_5pct": 0.5185483870967742,
+      "recall_at_5pct": 0.08094440808092307,
+      "lift_at_5pct": 1.5882411949022526,
+      "ndcg_at_5pct": 0.6086679443186633,
+      "precision_at_10pct": 0.511638897890159,
+      "recall_at_10pct": 0.15792440182007328,
+      "lift_at_10pct": 1.566524563269704,
+      "ndcg_at_10pct": 0.607423677903654,
+      "precision_at_20pct": 0.4602539149023097,
+      "recall_at_20pct": 0.2823477238016639,
+      "lift_at_20pct": 1.4086304503358618,
+      "ndcg_at_20pct": 0.5854232213513976
+    }
+  ],
+  "development_behavior": {
+    "tuned_positive_counts": {
+      "major": 3409,
+      "minor": 3409,
+      "grp": 3409
+    },
+    "fixed_positive_counts": {
+      "major": 0,
+      "minor": 1726,
+      "grp": 3409
+    },
+    "all_tuned_labels_positive": true,
+    "no_fixed_major_positives": true
+  },
+  "versions": {
+    "python": "3.12.12",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.7.2"
+  },
+  "limitations": [
+    "Only six known-state probabilities, so many ranking ties",
+    "Development analysis was already inspected in earlier work",
+    "Prior experiments examined test outcomes; it is not an untouched holdout",
+    "Observed inspected-program cohort rather than every eligible restaurant"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "format_version": 1,
+  "method": "category_recurrence",
+  "input_columns": [
+    "last_present_major",
+    "last_present_minor",
+    "last_present_grp"
+  ],
+  "label_columns": [
+    "y_major",
+    "y_minor",
+    "y_grp"
+  ],
+  "smoothing_alpha": 0.0,
+  "training_examples": 18406,
+  "decision_thresholds": [
+    0.15504422509934623,
+    0.4285422412912453,
+    0.8
+  ],
+  "category_parameters": {
+    "major": {
+      "training_prevalence": 0.1813539063348908,
+      "unknown_previous_examples": 124,
+      "groups": {
+        "0": {
+          "training_examples": 15602,
+          "next_positive": 2419,
+          "probability": 0.15504422509934623
+        },
+        "1": {
+          "training_examples": 2680,
+          "next_positive": 877,
+          "probability": 0.32723880597014926
+        }
+      }
+    },
+    "minor": {
+      "training_prevalence": 0.5074975551450613,
+      "unknown_previous_examples": 124,
+      "groups": {
+        "0": {
+          "training_examples": 9789,
+          "next_positive": 4195,
+          "probability": 0.4285422412912453
+        },
+        "1": {
+          "training_examples": 8493,
+          "next_positive": 5077,
+          "probability": 0.5977864123395737
+        }
+      }
+    },
+    "grp": {
+      "training_prevalence": 0.9605020102140607,
+      "unknown_previous_examples": 124,
+      "groups": {
+        "0": {
+          "training_examples": 665,
+          "next_positive": 532,
+          "probability": 0.8
+        },
+        "1": {
+          "training_examples": 17617,
+          "next_positive": 17030,
+          "probability": 0.9666799114491684
+        }
+      }
+    }
+  },
+  "metadata": {
+    "train_sha256": "41eb4d27d1457856159d8df78b9f55b358f22910f8701e62323fac4a5d11f696",
+    "dev_sha256": "8e96c2668f8d25bcc570ea2ef83e223180b21fb8012eac6389dada35b35d4ea8",
+    "priority_weights": [
+      4,
+      2,
+      1
+    ],
+    "ranking_seed": 467,
+    "smoothing_selection": "Minimum tuning mean Brier; ties choose smaller alpha",
+    "threshold_selection": "Per-label tuning F1; exact ties choose larger threshold"
+  }
+}
